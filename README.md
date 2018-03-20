@@ -1,2 +1,2 @@
-# Imitate-Headline-App
-Swift仿写今日头条App
+
+一个红外遥控的简单App Demo，数据库操作
