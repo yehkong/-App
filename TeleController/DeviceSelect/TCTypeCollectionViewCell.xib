@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TCTypeCollectionViewCell" customModule="TeleController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="225"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-Bm-8b9">
+                    <rect key="frame" x="0.0" y="112.5" width="225" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="BbC-0a-RwU"/>
+                    </constraints>
+                </progressView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEg-u8-0XE">
+                    <rect key="frame" x="56.5" y="54" width="112.5" height="43.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aEg-u8-0XE" secondAttribute="height" multiplier="51:20" constant="2" id="dJq-p8-oQF"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0B-4G-9yw">
+                    <rect key="frame" x="91.5" y="128.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LZy-Bm-8b9" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="7by-SG-E62"/>
+                <constraint firstItem="J0B-4G-9yw" firstAttribute="top" secondItem="LZy-Bm-8b9" secondAttribute="bottom" constant="15" id="BTY-rT-nAG"/>
+                <constraint firstItem="J0B-4G-9yw" firstAttribute="centerX" secondItem="LZy-Bm-8b9" secondAttribute="centerX" id="BUS-CX-J6p"/>
+                <constraint firstItem="LZy-Bm-8b9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="EKR-wS-7U8"/>
+                <constraint firstItem="LZy-Bm-8b9" firstAttribute="top" secondItem="aEg-u8-0XE" secondAttribute="bottom" constant="15" id="Lqn-wr-sN7"/>
+                <constraint firstItem="LZy-Bm-8b9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nfe-Kd-zf8"/>
+                <constraint firstItem="aEg-u8-0XE" firstAttribute="centerX" secondItem="LZy-Bm-8b9" secondAttribute="centerX" id="eNc-3r-KPd"/>
+                <constraint firstItem="aEg-u8-0XE" firstAttribute="width" secondItem="LZy-Bm-8b9" secondAttribute="width" multiplier="0.5" id="myD-1H-xxs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="TeleImageView" destination="aEg-u8-0XE" id="E7j-QY-oXm"/>
+                <outlet property="TeleLabel" destination="J0B-4G-9yw" id="nol-HP-kpQ"/>
+            </connections>
+            <point key="canvasLocation" x="-27.5" y="-161.5"/>
+        </view>
+    </objects>
+</document>

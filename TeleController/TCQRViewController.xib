@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TCQRViewController" customModule="TeleController" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KF6-Jb-rgg">
+                    <rect key="frame" x="74.5" y="233.5" width="225" height="200"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描被遥控设备上的二维码会自动创建遥控器" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAw-4T-3Cq">
+                    <rect key="frame" x="47" y="464" width="281" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KF6-Jb-rgg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="2cu-tw-33W"/>
+                <constraint firstItem="KF6-Jb-rgg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AST-uG-lhC"/>
+                <constraint firstItem="KAw-4T-3Cq" firstAttribute="top" secondItem="KF6-Jb-rgg" secondAttribute="bottom" constant="30" id="Fx6-LW-nOa"/>
+                <constraint firstItem="KF6-Jb-rgg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NWB-Ml-Ykg"/>
+                <constraint firstItem="KAw-4T-3Cq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="PXO-XA-akA"/>
+                <constraint firstItem="KAw-4T-3Cq" firstAttribute="centerX" secondItem="KF6-Jb-rgg" secondAttribute="centerX" id="cIc-tv-bLf"/>
+                <constraint firstItem="KF6-Jb-rgg" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="dFP-6x-PNv"/>
+            </constraints>
+            <point key="canvasLocation" x="28.5" y="59.5"/>
+        </view>
+    </objects>
+</document>

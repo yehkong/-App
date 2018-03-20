@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		119D7728206143840013074A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119D7727206143840013074A /* Launch Screen.storyboard */; };
+		1930A8411FEA3B6500928B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930A8401FEA3B6500928B6B /* AppDelegate.swift */; };
+		1930A8461FEA3B6500928B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930A8441FEA3B6500928B6B /* Main.storyboard */; };
+		1930A8481FEA3B6500928B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1930A8471FEA3B6500928B6B /* Assets.xcassets */; };
+		1930A8531FEA40DD00928B6B /* TCNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930A8521FEA40DD00928B6B /* TCNavigationViewController.swift */; };
+		1935E31D1FF32B0200B714FB /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935E31C1FF32B0200B714FB /* TCViewController.swift */; };
+		1957820D1FEE457700836EC7 /* TCQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957820B1FEE457700836EC7 /* TCQRViewController.swift */; };
+		1957820E1FEE457700836EC7 /* TCQRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1957820C1FEE457700836EC7 /* TCQRViewController.xib */; };
+		195782221FEE616400836EC7 /* TCMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195782211FEE616400836EC7 /* TCMoreViewController.swift */; };
+		19746FB71FEA50C5001F3BED /* TCAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19746FB61FEA50C5001F3BED /* TCAddViewController.swift */; };
+		19746FB91FEA510B001F3BED /* TCCurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19746FB81FEA510B001F3BED /* TCCurrentViewController.swift */; };
+		198091521FF5DF2400FAE029 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 198091511FF5DF0C00FAE029 /* CoreData.framework */; };
+		199A92021FEB61EA0052C878 /* TCTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199A92011FEB61EA0052C878 /* TCTypeViewController.swift */; };
+		19A7CE231FEBB136001E8645 /* TCTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7CE221FEBB136001E8645 /* TCTypeCollectionViewCell.swift */; };
+		19A7CE251FEBB3D0001E8645 /* TCTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19A7CE241FEBB3D0001E8645 /* TCTypeCollectionViewCell.xib */; };
+		19ABE3041FECF3E700BE5E9B /* TCCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ABE3031FECF3E700BE5E9B /* TCCollectionLayout.swift */; };
+		19B335871FF4D1EC003D1887 /* TCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B335861FF4D1EB003D1887 /* TCHomeViewController.swift */; };
+		19B3358A1FF4D5B2003D1887 /* TCTeleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B335881FF4D5B2003D1887 /* TCTeleListViewController.swift */; };
+		19B3358B1FF4D5B2003D1887 /* TCTeleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B335891FF4D5B2003D1887 /* TCTeleListViewController.xib */; };
+		19D835E71FFCDC3900811843 /* control_type+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D835E51FFCDC3900811843 /* control_type+CoreDataClass.swift */; };
+		19D835E81FFCDC3900811843 /* control_type+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D835E61FFCDC3900811843 /* control_type+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		119D7727206143840013074A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		1930A83D1FEA3B6500928B6B /* TeleController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeleController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1930A8401FEA3B6500928B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1930A8451FEA3B6500928B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1930A8471FEA3B6500928B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1930A84C1FEA3B6500928B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1930A8521FEA40DD00928B6B /* TCNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCNavigationViewController.swift; sourceTree = "<group>"; };
+		1935E31C1FF32B0200B714FB /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
+		1957820B1FEE457700836EC7 /* TCQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCQRViewController.swift; sourceTree = "<group>"; };
+		1957820C1FEE457700836EC7 /* TCQRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCQRViewController.xib; sourceTree = "<group>"; };
+		195782211FEE616400836EC7 /* TCMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCMoreViewController.swift; sourceTree = "<group>"; };
+		19746FB61FEA50C5001F3BED /* TCAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAddViewController.swift; sourceTree = "<group>"; };
+		19746FB81FEA510B001F3BED /* TCCurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCurrentViewController.swift; sourceTree = "<group>"; };
+		198091511FF5DF0C00FAE029 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		199A92011FEB61EA0052C878 /* TCTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTypeViewController.swift; sourceTree = "<group>"; };
+		19A7CE221FEBB136001E8645 /* TCTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		19A7CE241FEBB3D0001E8645 /* TCTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		19ABE3031FECF3E700BE5E9B /* TCCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCCollectionLayout.swift; sourceTree = "<group>"; };
+		19B335861FF4D1EB003D1887 /* TCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCHomeViewController.swift; sourceTree = "<group>"; };
+		19B335881FF4D5B2003D1887 /* TCTeleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTeleListViewController.swift; sourceTree = "<group>"; };
+		19B335891FF4D5B2003D1887 /* TCTeleListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCTeleListViewController.xib; sourceTree = "<group>"; };
+		19C226A41FFC6CC500FCE282 /* tsg_temp.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = tsg_temp.db; sourceTree = "<group>"; };
+		19D835E51FFCDC3900811843 /* control_type+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "control_type+CoreDataClass.swift"; sourceTree = "<group>"; };
+		19D835E61FFCDC3900811843 /* control_type+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "control_type+CoreDataProperties.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1930A83A1FEA3B6500928B6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				198091521FF5DF2400FAE029 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1930A8341FEA3B6400928B6B = {
+			isa = PBXGroup;
+			children = (
+				19D835E51FFCDC3900811843 /* control_type+CoreDataClass.swift */,
+				19D835E61FFCDC3900811843 /* control_type+CoreDataProperties.swift */,
+				1930A83F1FEA3B6500928B6B /* TeleController */,
+				1930A83E1FEA3B6500928B6B /* Products */,
+				198091501FF5DF0B00FAE029 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1930A83E1FEA3B6500928B6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1930A83D1FEA3B6500928B6B /* TeleController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1930A83F1FEA3B6500928B6B /* TeleController */ = {
+			isa = PBXGroup;
+			children = (
+				1930A8401FEA3B6500928B6B /* AppDelegate.swift */,
+				1935E31C1FF32B0200B714FB /* TCViewController.swift */,
+				19B335861FF4D1EB003D1887 /* TCHomeViewController.swift */,
+				1930A8521FEA40DD00928B6B /* TCNavigationViewController.swift */,
+				19746FB61FEA50C5001F3BED /* TCAddViewController.swift */,
+				19746FB81FEA510B001F3BED /* TCCurrentViewController.swift */,
+				1957820B1FEE457700836EC7 /* TCQRViewController.swift */,
+				1957820C1FEE457700836EC7 /* TCQRViewController.xib */,
+				195782121FEE583300836EC7 /* Setting */,
+				195782101FEE4BD100836EC7 /* TeleList */,
+				1957820A1FEE43A200836EC7 /* DeviceSelect */,
+				1930A8441FEA3B6500928B6B /* Main.storyboard */,
+				1930A8471FEA3B6500928B6B /* Assets.xcassets */,
+				119D7727206143840013074A /* Launch Screen.storyboard */,
+				1930A84C1FEA3B6500928B6B /* Info.plist */,
+				19C226A41FFC6CC500FCE282 /* tsg_temp.db */,
+			);
+			path = TeleController;
+			sourceTree = "<group>";
+		};
+		1957820A1FEE43A200836EC7 /* DeviceSelect */ = {
+			isa = PBXGroup;
+			children = (
+				199A92011FEB61EA0052C878 /* TCTypeViewController.swift */,
+				19ABE3031FECF3E700BE5E9B /* TCCollectionLayout.swift */,
+				19A7CE221FEBB136001E8645 /* TCTypeCollectionViewCell.swift */,
+				19A7CE241FEBB3D0001E8645 /* TCTypeCollectionViewCell.xib */,
+			);
+			path = DeviceSelect;
+			sourceTree = "<group>";
+		};
+		195782101FEE4BD100836EC7 /* TeleList */ = {
+			isa = PBXGroup;
+			children = (
+				19B335881FF4D5B2003D1887 /* TCTeleListViewController.swift */,
+				19B335891FF4D5B2003D1887 /* TCTeleListViewController.xib */,
+			);
+			path = TeleList;
+			sourceTree = "<group>";
+		};
+		195782121FEE583300836EC7 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				195782211FEE616400836EC7 /* TCMoreViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		198091501FF5DF0B00FAE029 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				198091511FF5DF0C00FAE029 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1930A83C1FEA3B6500928B6B /* TeleController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1930A84F1FEA3B6500928B6B /* Build configuration list for PBXNativeTarget "TeleController" */;
+			buildPhases = (
+				1930A8391FEA3B6500928B6B /* Sources */,
+				1930A83A1FEA3B6500928B6B /* Frameworks */,
+				1930A83B1FEA3B6500928B6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeleController;
+			productName = TeleController;
+			productReference = 1930A83D1FEA3B6500928B6B /* TeleController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1930A8351FEA3B6400928B6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TC;
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = yetaiwen;
+				TargetAttributes = {
+					1930A83C1FEA3B6500928B6B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1930A8381FEA3B6400928B6B /* Build configuration list for PBXProject "TeleController" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1930A8341FEA3B6400928B6B;
+			productRefGroup = 1930A83E1FEA3B6500928B6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1930A83C1FEA3B6500928B6B /* TeleController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1930A83B1FEA3B6500928B6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				119D7728206143840013074A /* Launch Screen.storyboard in Resources */,
+				1957820E1FEE457700836EC7 /* TCQRViewController.xib in Resources */,
+				19A7CE251FEBB3D0001E8645 /* TCTypeCollectionViewCell.xib in Resources */,
+				1930A8481FEA3B6500928B6B /* Assets.xcassets in Resources */,
+				1930A8461FEA3B6500928B6B /* Main.storyboard in Resources */,
+				19B3358B1FF4D5B2003D1887 /* TCTeleListViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1930A8391FEA3B6500928B6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D835E81FFCDC3900811843 /* control_type+CoreDataProperties.swift in Sources */,
+				1930A8411FEA3B6500928B6B /* AppDelegate.swift in Sources */,
+				19B3358A1FF4D5B2003D1887 /* TCTeleListViewController.swift in Sources */,
+				19746FB91FEA510B001F3BED /* TCCurrentViewController.swift in Sources */,
+				1935E31D1FF32B0200B714FB /* TCViewController.swift in Sources */,
+				19A7CE231FEBB136001E8645 /* TCTypeCollectionViewCell.swift in Sources */,
+				19B335871FF4D1EC003D1887 /* TCHomeViewController.swift in Sources */,
+				19ABE3041FECF3E700BE5E9B /* TCCollectionLayout.swift in Sources */,
+				195782221FEE616400836EC7 /* TCMoreViewController.swift in Sources */,
+				1957820D1FEE457700836EC7 /* TCQRViewController.swift in Sources */,
+				199A92021FEB61EA0052C878 /* TCTypeViewController.swift in Sources */,
+				1930A8531FEA40DD00928B6B /* TCNavigationViewController.swift in Sources */,
+				19D835E71FFCDC3900811843 /* control_type+CoreDataClass.swift in Sources */,
+				19746FB71FEA50C5001F3BED /* TCAddViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1930A8441FEA3B6500928B6B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1930A8451FEA3B6500928B6B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1930A84D1FEA3B6500928B6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1930A84E1FEA3B6500928B6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1930A8501FEA3B6500928B6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53KC6D4H8R;
+				INFOPLIST_FILE = TeleController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.0101.yetaiwen.TeleController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1930A8511FEA3B6500928B6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53KC6D4H8R;
+				INFOPLIST_FILE = TeleController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.0101.yetaiwen.TeleController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1930A8381FEA3B6400928B6B /* Build configuration list for PBXProject "TeleController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1930A84D1FEA3B6500928B6B /* Debug */,
+				1930A84E1FEA3B6500928B6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1930A84F1FEA3B6500928B6B /* Build configuration list for PBXNativeTarget "TeleController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1930A8501FEA3B6500928B6B /* Debug */,
+				1930A8511FEA3B6500928B6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1930A8351FEA3B6400928B6B /* Project object */;
+}
