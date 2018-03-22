@@ -13,7 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    //context 延迟加载
+    //context
     lazy var modelManagerContext: NSManagedObjectContext = {
         let managerContext = NSManagedObjectContext.init(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
         managerContext.persistentStoreCoordinator = self.managerModelCoordinator
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do{
             try modelCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
         }catch let error as NSError{
-            
+            print("persistent store:error:\(error)")
         }
         
         return modelCoordinator
@@ -42,8 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if self.modelManagerContext.hasChanges {
             do{
                try self.modelManagerContext.save()
-            }catch{
-                
+            }catch let err as NSError{
+                print("save error:\(err)")
             }
         }else{
             
@@ -63,10 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //
         //        let firstPageController = TCNavigationViewController.init(rootViewController: addViewController)
         //
-        //        let firstPageController = TCNavigationViewController.init(rootViewController: TCViewController.init())
+                let firstPageController = TCNavigationViewController.init(rootViewController: TCViewController.init())
         
+//                let firstPageController = TCNavigationViewController.init(rootViewController: TCTeleListViewController())
         
-                let firstPageController = TCNavigationViewController.init(rootViewController: TCTeleListViewController())
                 window?.rootViewController = firstPageController
                 window?.makeKeyAndVisible()
         

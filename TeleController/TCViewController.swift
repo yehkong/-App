@@ -12,15 +12,15 @@ class TCViewController: TCHomeViewController {
     
     //    var tcNavigationController: TCNavigationViewController?
     
-    var telelistViewController : TCTeleListViewController!
+    var telelistViewController : TCTeleListViewController!//列表
     
     var coverView : UIView?
     
     var mainView : UIView!
     
-    var addViewController : TCAddViewController?
+    var addViewController : TCAddViewController?//添加
     
-    var currentViewController : TCCurrentViewController?
+    var currentViewController : TCCurrentViewController?//当前
     
     var isListShow = false
 
@@ -39,10 +39,10 @@ class TCViewController: TCHomeViewController {
         mainView.frame = self.view.bounds
 
         
-        addViewController = (UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCAddViewController") as! TCAddViewController)
-        mainView.addSubview((addViewController?.view)!)
-        currentViewController = (UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCCurrentViewController") as! TCCurrentViewController)
-        mainView.addSubview((currentViewController?.view)!)
+        addViewController = (UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCAddViewController") as? TCAddViewController)
+        mainView.addSubview((addViewController!.view))
+        currentViewController = (UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCCurrentViewController") as? TCCurrentViewController)
+        mainView.addSubview((currentViewController!.view))
 
         //        tcNavigationController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCNavigationViewController") as? TCNavigationViewController
         

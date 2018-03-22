@@ -1,4 +1,4 @@
-//
+
 //  TCTeleListViewController.swift
 //  TeleController
 //
@@ -13,7 +13,7 @@ class TCTeleListViewController: TCHomeViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var dataArr : NSMutableArray!{
+    var dataArr : NSArray!{
         didSet{
             tableView.reloadData()
         }
@@ -26,7 +26,7 @@ class TCTeleListViewController: TCHomeViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
-//        dataArr = getData()
+        dataArr = getData()
         // Do any additional setup after loading the view.
     }
 
@@ -34,24 +34,26 @@ class TCTeleListViewController: TCHomeViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func getData() -> (NSMutableArray){
+    func getData() -> (NSArray){
 //                let fetchRequest:NSFetchRequest<control_type> = control_type.fetchRequest()
 //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "control_type")
         let appDelegate  = UIApplication.shared.delegate as! AppDelegate
 
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "control_type")
+        let fetchRequest : NSFetchRequest = control_type.fetchRequest()
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "control_type")
+        
 //        let fetchRequest = control_type.fetchRequest()
-        let entity = NSEntityDescription.entity(forEntityName: "control_type", in: appDelegate.modelManagerContext)
-        fetchRequest.entity = entity
-        var arr : NSMutableArray!
+//        let entity = NSEntityDescription.entity(forEntityName: "control_type", in: appDelegate.modelManagerContext)
+//        fetchRequest.entity = entity
+        
+        var arr : [Any]?
         
         do {
-            let arr1 = try appDelegate.modelManagerContext.execute(fetchRequest)
-//            arr.addObjects(from: arr1)
+            arr = try appDelegate.modelManagerContext.fetch(fetchRequest)
         } catch let error as NSError {
-            print("error: \(error)")
+            print("fetch request error: \(error)")
         }
-        return arr
+        return arr! as NSArray
     }
 
     /*

@@ -12,6 +12,8 @@
 		1930A8461FEA3B6500928B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930A8441FEA3B6500928B6B /* Main.storyboard */; };
 		1930A8481FEA3B6500928B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1930A8471FEA3B6500928B6B /* Assets.xcassets */; };
 		1930A8531FEA40DD00928B6B /* TCNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930A8521FEA40DD00928B6B /* TCNavigationViewController.swift */; };
+		1932A37A20633DF100AC772F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1932A37820633DF100AC772F /* LICENSE */; };
+		1932A37B20633DF100AC772F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1932A37920633DF100AC772F /* README.md */; };
 		1935E31D1FF32B0200B714FB /* TCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1935E31C1FF32B0200B714FB /* TCViewController.swift */; };
 		1957820D1FEE457700836EC7 /* TCQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957820B1FEE457700836EC7 /* TCQRViewController.swift */; };
 		1957820E1FEE457700836EC7 /* TCQRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1957820C1FEE457700836EC7 /* TCQRViewController.xib */; };
@@ -38,6 +40,8 @@
 		1930A8471FEA3B6500928B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1930A84C1FEA3B6500928B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1930A8521FEA40DD00928B6B /* TCNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCNavigationViewController.swift; sourceTree = "<group>"; };
+		1932A37820633DF100AC772F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1932A37920633DF100AC772F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1935E31C1FF32B0200B714FB /* TCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCViewController.swift; sourceTree = "<group>"; };
 		1957820B1FEE457700836EC7 /* TCQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCQRViewController.swift; sourceTree = "<group>"; };
 		1957820C1FEE457700836EC7 /* TCQRViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCQRViewController.xib; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		1930A8341FEA3B6400928B6B = {
 			isa = PBXGroup;
 			children = (
+				1932A37820633DF100AC772F /* LICENSE */,
+				1932A37920633DF100AC772F /* README.md */,
 				19D835E51FFCDC3900811843 /* control_type+CoreDataClass.swift */,
 				19D835E61FFCDC3900811843 /* control_type+CoreDataProperties.swift */,
 				1930A83F1FEA3B6500928B6B /* TeleController */,
@@ -210,8 +216,10 @@
 				119D7728206143840013074A /* Launch Screen.storyboard in Resources */,
 				1957820E1FEE457700836EC7 /* TCQRViewController.xib in Resources */,
 				19A7CE251FEBB3D0001E8645 /* TCTypeCollectionViewCell.xib in Resources */,
+				1932A37A20633DF100AC772F /* LICENSE in Resources */,
 				1930A8481FEA3B6500928B6B /* Assets.xcassets in Resources */,
 				1930A8461FEA3B6500928B6B /* Main.storyboard in Resources */,
+				1932A37B20633DF100AC772F /* README.md in Resources */,
 				19B3358B1FF4D5B2003D1887 /* TCTeleListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
