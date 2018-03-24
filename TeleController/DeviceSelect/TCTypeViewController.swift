@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import CoreData
+
+protocol updateDataDelegate{
+    func updateData(addDevice device : Control_type) -> ()
+}
 
 let ScreenW = UIScreen.main.bounds.size.width
 let ScreenH = UIScreen.main.bounds.size.height
@@ -15,9 +20,11 @@ class TCTypeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var delegate : updateDataDelegate?
+    
     private let CellID = "TCTypeCollectionViewCell"
     
-    lazy var devieTypeArr : NSMutableArray = {
+    lazy var devieTypeArr : NSMutableArray! = {
         let arr = NSMutableArray()
         arr.addObjects(from: ["img_device_air_cleaner","img_device_air_condition","img_device_amplifier","img_device_box","img_device_dvd","img_device_fan","img_device_light","img_device_projector","img_device_slr","img_device_stb","img_device_tv","img_device_water_heater"])
         return arr
@@ -72,10 +79,20 @@ extension TCTypeViewController : UICollectionViewDataSource,UICollectionViewDele
         let img = UIImage.init(named: devieTypeArr.object(at: indexPath.item) as! String)
         cell?.TeleImageView.image = img
         cell?.TeleLabel.text = "设备\(indexPath.item)"
-        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(choiseTeleDevice(_:)))
-        cell?.contentView .addGestureRecognizer(gesture)
+//        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(choiseTeleDevice(_:)))
+//        cell?.contentView .addGestureRecognizer(gesture)
         return cell!
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let device = NSEntityDescription.insertNewObject(forEntityName: "Control_type", into: appDelegate.modelManagerContext) as! Control_type
+        device.define_ID = Int16(indexPath.item)
+        device.name_ch = "设备\(indexPath.item)" + "-\(arc4random()%100)"
+        appDelegate.saveCoreDataContext()
+        delegate?.updateData(addDevice: device)
     }
 }
 

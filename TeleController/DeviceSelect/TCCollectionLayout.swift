@@ -11,10 +11,11 @@ import UIKit
 class TCCollectionLayout: UICollectionViewFlowLayout {
     override func prepare() {
         super .prepare()
-        itemSize = CGSize.init(width: (ScreenW - 40)/3, height: (ScreenW - 40)/3)
+        itemSize = CGSize.init(width: (ScreenW-40)/3.0, height: (ScreenW-40)/3.0)
         minimumLineSpacing = 10.0
         minimumInteritemSpacing = 10.0
         sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         scrollDirection = .vertical
+        
     }
 }

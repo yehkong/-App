@@ -6,28 +6,29 @@
 //  Copyright © 2017年 yetaiwen. All rights reserved.
 //
 
+/*
+ 主View
+ */
+
 import UIKit
 
 class TCViewController: TCHomeViewController {
     
-    //    var tcNavigationController: TCNavigationViewController?
-    
-    var telelistViewController : TCTeleListViewController!//列表
+    var telelistViewController : TCTeleListViewController!  //列表
     
     var coverView : UIView?
     
     var mainView : UIView!
     
-    var addViewController : TCAddViewController?//添加
+    var addViewController : TCAddViewController?            //添加
     
-    var currentViewController : TCCurrentViewController?//当前
+    var currentViewController : TCCurrentViewController?    //当前
     
     var isListShow = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        telelistViewController = Bundle.main.loadNibNamed("TCTeleListViewController", owner: nil, options: nil)?.first as! TCTeleListViewController //不对的写法
         telelistViewController = TCTeleListViewController()
         self.view.addSubview(telelistViewController.view)
         coverView = UIView()
@@ -37,14 +38,12 @@ class TCViewController: TCHomeViewController {
         
         mainView = UIView()
         mainView.frame = self.view.bounds
-
+        
         
         addViewController = (UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCAddViewController") as? TCAddViewController)
         mainView.addSubview((addViewController!.view))
         currentViewController = (UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCCurrentViewController") as? TCCurrentViewController)
         mainView.addSubview((currentViewController!.view))
-
-        //        tcNavigationController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TCNavigationViewController") as? TCNavigationViewController
         
         self.view.addSubview(mainView)
         
@@ -61,11 +60,6 @@ class TCViewController: TCHomeViewController {
         if isListShow {
             UIView.animate(withDuration: 0.35, animations: { [unowned self] in
                 
-                //            self.currentViewController?.view.center = CGPoint.init(x: ScreenW, y: ScreenH/2)
-                //            self.addViewController?.view.center = CGPoint.init(x: ScreenW, y: ScreenH/2)
-                //            self.currentViewController?.view.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
-                //            self.addViewController?.view.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
-                
                 self.mainView.center = CGPoint.init(x: ScreenW/2, y: ScreenH/2)
                 self.mainView.transform = CGAffineTransform.identity
             }) { (true) in
@@ -75,10 +69,6 @@ class TCViewController: TCHomeViewController {
         }else{
             UIView.animate(withDuration: 0.35, animations: { [unowned self] in
                 self.coverView?.alpha = 0
-                //            self.currentViewController?.view.center = CGPoint.init(x: ScreenW, y: ScreenH/2)
-                //            self.addViewController?.view.center = CGPoint.init(x: ScreenW, y: ScreenH/2)
-                //            self.currentViewController?.view.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
-                //            self.addViewController?.view.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
                 
                 self.mainView.center = CGPoint.init(x: ScreenW, y: ScreenH/2)
                 self.mainView.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
@@ -88,6 +78,13 @@ class TCViewController: TCHomeViewController {
         isListShow = !isListShow
     }
     
+    
+    override func addTeleController(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let addViewController = storyboard.instantiateViewController(withIdentifier: "TCTypeViewController") as! TCTypeViewController
+        addViewController.delegate = telelistViewController
+        navigationController?.pushViewController(addViewController, animated: true)
+    }
     /*
      // MARK: - Navigation
      

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TCTeleListViewController: TCHomeViewController {
+class TCTeleListViewController: TCHomeViewController,updateDataDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,10 +23,14 @@ class TCTeleListViewController: TCHomeViewController {
 
         self.automaticallyAdjustsScrollViewInsets = true
         tableView.backgroundColor = UIColor.white
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
 
-        dataArr = getData()
+        dataArr = getControls() as NSArray
+        print("count:\(getControlCount())")
+        
+        tableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
     }
 
@@ -34,26 +38,36 @@ class TCTeleListViewController: TCHomeViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func getData() -> (NSArray){
-//                let fetchRequest:NSFetchRequest<control_type> = control_type.fetchRequest()
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "control_type")
-        let appDelegate  = UIApplication.shared.delegate as! AppDelegate
-
-        let fetchRequest : NSFetchRequest = control_type.fetchRequest()
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "control_type")
-        
-//        let fetchRequest = control_type.fetchRequest()
-//        let entity = NSEntityDescription.entity(forEntityName: "control_type", in: appDelegate.modelManagerContext)
-//        fetchRequest.entity = entity
-        
-        var arr : [Any]?
-        
+    
+    // 获取所有数据
+    func getControls() -> [Control_type] {
+        let fetchRequest = NSFetchRequest<Control_type>.init(entityName: "Control_type")
         do {
-            arr = try appDelegate.modelManagerContext.fetch(fetchRequest)
-        } catch let error as NSError {
-            print("fetch request error: \(error)")
+            let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+            let result = try appDelegate.modelManagerContext.fetch(fetchRequest)
+            return result
+        } catch let err as NSError{
+            print(err.description)
+//            fatalError();
         }
-        return arr! as NSArray
+        return [Control_type]()
+    }
+    
+    func getControlCount() -> Int {
+        let fetch : NSFetchRequest<Control_type> = Control_type.fetchRequest()
+        var result : Int = 0
+        do{
+            let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+            result = try appDelegate.modelManagerContext.count(for: fetch)
+        }catch let err{
+            print("\(err)")
+        }
+        return result
+        
+    }
+    
+    func updateData(addDevice device: Control_type) {
+        dataArr = self.getControls() as NSArray
     }
 
     /*
@@ -79,9 +93,16 @@ extension TCTeleListViewController : UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = "\(indexPath.row)"
-        return cell
+        let device : Control_type = dataArr[indexPath.row] as! Control_type
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        //FIXME: fix it
+        if cell === nil {
+            cell = UITableViewCell.init(style:.subtitle, reuseIdentifier: "cell")
+        }
+        cell?.detailTextLabel?.text = "\(device.name_ch ?? "name")"
+        cell?.detailTextLabel?.textColor = UIColor.darkText
+        cell?.textLabel?.text = "\(device.define_ID)"
+        return cell!
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

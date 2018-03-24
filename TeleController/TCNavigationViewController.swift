@@ -47,19 +47,4 @@ extension TCNavigationViewController{
     }
 }
 
-extension TCNavigationViewController{
-        @objc func showTeleControllerList(_ sender: UIBarButtonItem  ) -> () {
-            
-        }
-        
-        @objc func qrAction(_ sender:UIBarButtonItem) -> Void {
-            let qrViewController = TCQRViewController.init()
-            navigationController?.pushViewController(qrViewController, animated: true)
-        }
-        
-        @objc func addTeleController(_ sender : UIBarButtonItem){
-            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let addViewController = storyboard.instantiateViewController(withIdentifier: "TCTypeViewController")
-            navigationController?.pushViewController(addViewController, animated: true)
-        }
-}
+

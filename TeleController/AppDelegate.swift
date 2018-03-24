@@ -22,26 +22,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Model
     lazy var managerModel : NSManagedObjectModel = {
         let objectModel = NSManagedObjectModel.mergedModel(from: nil)
+        //        let url = Bundle.main.url(forResource:"YTModel", withExtension: "momd")
+        //       let objectModel = NSManagedObjectModel.init(contentsOf: url!)
         return objectModel!
     }()
     
     //coordinator
     lazy var managerModelCoordinator : NSPersistentStoreCoordinator = {
         let modelCoordinator = NSPersistentStoreCoordinator.init(managedObjectModel: self.managerModel)
-        let url = Bundle.main.resourceURL?.appendingPathComponent("tsg_temp.db")
+        //        let url = Bundle.main.resourceURL?.appendingPathComponent("tsg_temp1.db")
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+        let targetPath = documentsPath! + "/tsg_temp.db"
         do{
-            try modelCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
+            try modelCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: NSURL.init(fileURLWithPath: targetPath) as URL, options: nil)
         }catch let error as NSError{
             print("persistent store:error:\(error)")
         }
         
         return modelCoordinator
     }()
-    
+    //保存数据库操作
     func saveCoreDataContext() {
         if self.modelManagerContext.hasChanges {
             do{
-               try self.modelManagerContext.save()
+                try self.modelManagerContext.save()
             }catch let err as NSError{
                 print("save error:\(err)")
             }
@@ -49,11 +53,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
     }
+    //写入初始化数据,暂时未用
+    func writeDataToDB() {
+
+        for i in 0..<9 {
+            
+            let entity : Control_type = NSEntityDescription.insertNewObject(forEntityName: "Control_type", into: self.modelManagerContext) as! Control_type
+            entity.define_ID = Int16(i);
+            entity.name_ch = "name\(i)"
+            self.saveCoreDataContext()
+        }
+    }
+    
+    //copy外部数据库,暂时未用
+    func copyDbToDocumentsPath() -> Bool {
+        var sus = true
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+        let targetPath = documentsPath! + "/tsg_temp.db"
+        let isexist = FileManager.default.fileExists(atPath: targetPath)
+        if !isexist {
+            do{
+                try FileManager.default.copyItem(atPath: (Bundle.main.resourcePath! + "/tsg_temp.db")
+                    , toPath: targetPath)
+            }catch  let err as NSError{
+                sus = false
+                print(err.description)
+            }
+        }
+        return sus
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-//        let addViewController = storyBoard.instantiateViewController(withIdentifier: "TCAddViewController")
+        //        let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        //        let addViewController = storyBoard.instantiateViewController(withIdentifier: "TCAddViewController")
         //
         //
         //        let firstPageController = TCNavigationViewController.init(rootViewController: addViewController)
@@ -63,12 +96,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //
         //        let firstPageController = TCNavigationViewController.init(rootViewController: addViewController)
         //
-                let firstPageController = TCNavigationViewController.init(rootViewController: TCViewController.init())
+        let firstPageController = TCNavigationViewController.init(rootViewController: TCViewController.init())
         
-//                let firstPageController = TCNavigationViewController.init(rootViewController: TCTeleListViewController())
+        //                let firstPageController = TCNavigationViewController.init(rootViewController: TCTeleListViewController())
         
-                window?.rootViewController = firstPageController
-                window?.makeKeyAndVisible()
+//        writeDataToDB()
+        
+        window?.rootViewController = firstPageController
+        window?.makeKeyAndVisible()
         
         return true
     }

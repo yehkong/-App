@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		119D7728206143840013074A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119D7727206143840013074A /* Launch Screen.storyboard */; };
+		11E8E3E42065FEA300FBD8C4 /* tsg_temp.db in Resources */ = {isa = PBXBuildFile; fileRef = 11E8E3E32065FEA300FBD8C4 /* tsg_temp.db */; };
+		11E8E3E720665BBB00FBD8C4 /* YTModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11E8E3E520665BBB00FBD8C4 /* YTModel.xcdatamodeld */; };
 		1930A8411FEA3B6500928B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930A8401FEA3B6500928B6B /* AppDelegate.swift */; };
 		1930A8461FEA3B6500928B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930A8441FEA3B6500928B6B /* Main.storyboard */; };
 		1930A8481FEA3B6500928B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1930A8471FEA3B6500928B6B /* Assets.xcassets */; };
@@ -28,12 +30,12 @@
 		19B335871FF4D1EC003D1887 /* TCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B335861FF4D1EB003D1887 /* TCHomeViewController.swift */; };
 		19B3358A1FF4D5B2003D1887 /* TCTeleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B335881FF4D5B2003D1887 /* TCTeleListViewController.swift */; };
 		19B3358B1FF4D5B2003D1887 /* TCTeleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B335891FF4D5B2003D1887 /* TCTeleListViewController.xib */; };
-		19D835E71FFCDC3900811843 /* control_type+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D835E51FFCDC3900811843 /* control_type+CoreDataClass.swift */; };
-		19D835E81FFCDC3900811843 /* control_type+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D835E61FFCDC3900811843 /* control_type+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		119D7727206143840013074A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		11E8E3E32065FEA300FBD8C4 /* tsg_temp.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = tsg_temp.db; sourceTree = "<group>"; };
+		11E8E3E620665BBB00FBD8C4 /* YTModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YTModel.xcdatamodel; sourceTree = "<group>"; };
 		1930A83D1FEA3B6500928B6B /* TeleController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeleController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1930A8401FEA3B6500928B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1930A8451FEA3B6500928B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,9 +58,6 @@
 		19B335861FF4D1EB003D1887 /* TCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCHomeViewController.swift; sourceTree = "<group>"; };
 		19B335881FF4D5B2003D1887 /* TCTeleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCTeleListViewController.swift; sourceTree = "<group>"; };
 		19B335891FF4D5B2003D1887 /* TCTeleListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCTeleListViewController.xib; sourceTree = "<group>"; };
-		19C226A41FFC6CC500FCE282 /* tsg_temp.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = tsg_temp.db; sourceTree = "<group>"; };
-		19D835E51FFCDC3900811843 /* control_type+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "control_type+CoreDataClass.swift"; sourceTree = "<group>"; };
-		19D835E61FFCDC3900811843 /* control_type+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "control_type+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +77,7 @@
 			children = (
 				1932A37820633DF100AC772F /* LICENSE */,
 				1932A37920633DF100AC772F /* README.md */,
-				19D835E51FFCDC3900811843 /* control_type+CoreDataClass.swift */,
-				19D835E61FFCDC3900811843 /* control_type+CoreDataProperties.swift */,
+				11E8E3E520665BBB00FBD8C4 /* YTModel.xcdatamodeld */,
 				1930A83F1FEA3B6500928B6B /* TeleController */,
 				1930A83E1FEA3B6500928B6B /* Products */,
 				198091501FF5DF0B00FAE029 /* Frameworks */,
@@ -111,8 +109,8 @@
 				1930A8441FEA3B6500928B6B /* Main.storyboard */,
 				1930A8471FEA3B6500928B6B /* Assets.xcassets */,
 				119D7727206143840013074A /* Launch Screen.storyboard */,
+				11E8E3E32065FEA300FBD8C4 /* tsg_temp.db */,
 				1930A84C1FEA3B6500928B6B /* Info.plist */,
-				19C226A41FFC6CC500FCE282 /* tsg_temp.db */,
 			);
 			path = TeleController;
 			sourceTree = "<group>";
@@ -214,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				119D7728206143840013074A /* Launch Screen.storyboard in Resources */,
+				11E8E3E42065FEA300FBD8C4 /* tsg_temp.db in Resources */,
 				1957820E1FEE457700836EC7 /* TCQRViewController.xib in Resources */,
 				19A7CE251FEBB3D0001E8645 /* TCTypeCollectionViewCell.xib in Resources */,
 				1932A37A20633DF100AC772F /* LICENSE in Resources */,
@@ -231,7 +230,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D835E81FFCDC3900811843 /* control_type+CoreDataProperties.swift in Sources */,
 				1930A8411FEA3B6500928B6B /* AppDelegate.swift in Sources */,
 				19B3358A1FF4D5B2003D1887 /* TCTeleListViewController.swift in Sources */,
 				19746FB91FEA510B001F3BED /* TCCurrentViewController.swift in Sources */,
@@ -242,8 +240,8 @@
 				195782221FEE616400836EC7 /* TCMoreViewController.swift in Sources */,
 				1957820D1FEE457700836EC7 /* TCQRViewController.swift in Sources */,
 				199A92021FEB61EA0052C878 /* TCTypeViewController.swift in Sources */,
+				11E8E3E720665BBB00FBD8C4 /* YTModel.xcdatamodeld in Sources */,
 				1930A8531FEA40DD00928B6B /* TCNavigationViewController.swift in Sources */,
-				19D835E71FFCDC3900811843 /* control_type+CoreDataClass.swift in Sources */,
 				19746FB71FEA50C5001F3BED /* TCAddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +421,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11E8E3E520665BBB00FBD8C4 /* YTModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11E8E3E620665BBB00FBD8C4 /* YTModel.xcdatamodel */,
+			);
+			currentVersion = 11E8E3E620665BBB00FBD8C4 /* YTModel.xcdatamodel */;
+			name = YTModel.xcdatamodeld;
+			path = TeleController/YTModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1930A8351FEA3B6400928B6B /* Project object */;
 }

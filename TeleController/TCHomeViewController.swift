@@ -21,9 +21,9 @@ class TCHomeViewController: UIViewController {
         titleLabel.frame = lableFrame
         navigationItem.titleView = titleLabel
         //列表item
-        navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "icon_setting"), style: .plain, target: self, action: #selector(showTeleControllerList(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "list"), style: .plain, target: self, action: #selector(showTeleControllerList(_:)))
         //二维码item
-        let qr_btn = UIBarButtonItem.init(image: UIImage.init(named: "img_menu_small_2"), style: .plain, target: self, action: #selector(qrAction(_ :)))
+        let qr_btn = UIBarButtonItem.init(image: UIImage.init(named: "btn_qr"), style: .plain, target: self, action: #selector(qrAction(_ :)))
         //增加item
         let add_btn = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addTeleController(_:)))
         self.navigationItem.rightBarButtonItems = [qr_btn,add_btn]
@@ -58,7 +58,7 @@ extension TCHomeViewController{
         let qrViewController = TCQRViewController.init()
         
         navigationController?.pushViewController(qrViewController, animated: true)
-//        present(qrViewController, animated: true, completion: nil)
+        //        present(qrViewController, animated: true, completion: nil)
     }
     
     @objc func addTeleController(_ sender : UIBarButtonItem){
