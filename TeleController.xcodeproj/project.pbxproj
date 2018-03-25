@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1163F81A2067B286003AD68C /* YCXMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163F8172067B286003AD68C /* YCXMenuItem.m */; };
-		1163F81B2067B286003AD68C /* YCXMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163F8192067B286003AD68C /* YCXMenu.m */; };
 		119D7728206143840013074A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119D7727206143840013074A /* Launch Screen.storyboard */; };
 		11E8E3E720665BBB00FBD8C4 /* YTModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11E8E3E520665BBB00FBD8C4 /* YTModel.xcdatamodeld */; };
 		1930A8411FEA3B6500928B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930A8401FEA3B6500928B6B /* AppDelegate.swift */; };
@@ -34,11 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1163F8162067B286003AD68C /* YCXMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCXMenu.h; sourceTree = "<group>"; };
-		1163F8172067B286003AD68C /* YCXMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCXMenuItem.m; sourceTree = "<group>"; };
-		1163F8182067B286003AD68C /* YCXMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCXMenuItem.h; sourceTree = "<group>"; };
-		1163F8192067B286003AD68C /* YCXMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCXMenu.m; sourceTree = "<group>"; };
-		1163F81C2067B348003AD68C /* TeleController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeleController-Bridging-Header.h"; sourceTree = "<group>"; };
 		119D7727206143840013074A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		11E8E3E620665BBB00FBD8C4 /* YTModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YTModel.xcdatamodel; sourceTree = "<group>"; };
 		1930A83D1FEA3B6500928B6B /* TeleController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeleController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,18 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1163F8152067B279003AD68C /* YCXMenu */ = {
-			isa = PBXGroup;
-			children = (
-				1163F81C2067B348003AD68C /* TeleController-Bridging-Header.h */,
-				1163F8162067B286003AD68C /* YCXMenu.h */,
-				1163F8192067B286003AD68C /* YCXMenu.m */,
-				1163F8182067B286003AD68C /* YCXMenuItem.h */,
-				1163F8172067B286003AD68C /* YCXMenuItem.m */,
-			);
-			path = YCXMenu;
-			sourceTree = "<group>";
-		};
 		1930A8341FEA3B6400928B6B = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +104,6 @@
 				195782121FEE583300836EC7 /* Setting */,
 				195782101FEE4BD100836EC7 /* TeleList */,
 				1957820A1FEE43A200836EC7 /* DeviceSelect */,
-				1163F8152067B279003AD68C /* YCXMenu */,
 				1930A8441FEA3B6500928B6B /* Main.storyboard */,
 				1930A8471FEA3B6500928B6B /* Assets.xcassets */,
 				119D7727206143840013074A /* Launch Screen.storyboard */,
@@ -250,14 +230,12 @@
 				19B3358A1FF4D5B2003D1887 /* TCTeleListViewController.swift in Sources */,
 				19746FB91FEA510B001F3BED /* TCCurrentViewController.swift in Sources */,
 				1935E31D1FF32B0200B714FB /* TCViewController.swift in Sources */,
-				1163F81A2067B286003AD68C /* YCXMenuItem.m in Sources */,
 				19A7CE231FEBB136001E8645 /* TCTypeCollectionViewCell.swift in Sources */,
 				19B335871FF4D1EC003D1887 /* TCHomeViewController.swift in Sources */,
 				19ABE3041FECF3E700BE5E9B /* TCCollectionLayout.swift in Sources */,
 				195782221FEE616400836EC7 /* TCMoreViewController.swift in Sources */,
 				1957820D1FEE457700836EC7 /* TCQRViewController.swift in Sources */,
 				199A92021FEB61EA0052C878 /* TCTypeViewController.swift in Sources */,
-				1163F81B2067B286003AD68C /* YCXMenu.m in Sources */,
 				11E8E3E720665BBB00FBD8C4 /* YTModel.xcdatamodeld in Sources */,
 				1930A8531FEA40DD00928B6B /* TCNavigationViewController.swift in Sources */,
 				19746FB71FEA50C5001F3BED /* TCAddViewController.swift in Sources */,
@@ -396,7 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0101.yetaiwen.TeleController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TeleController/YCXMenu/TeleController-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -413,7 +391,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.0101.yetaiwen.TeleController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TeleController/YCXMenu/TeleController-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

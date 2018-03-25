@@ -89,7 +89,7 @@ class TCTeleListViewController: TCHomeViewController,updateDataDelegate {
 }
 
 extension TCTeleListViewController : UITableViewDataSource,UITableViewDelegate{
-
+    
     ///ytw TalbeViewDataSource //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArr.count
@@ -120,10 +120,12 @@ extension TCTeleListViewController : UITableViewDataSource,UITableViewDelegate{
     //长按cell删除
     @objc func longPressAction(_ gesture: UIGestureRecognizer) -> () {
         if gesture.state == UIGestureRecognizerState.began {
-            let deleteItem = YCXMenuItem.init("删除", image: nil, target: self, action: #selector(deleteAction(_:)))
-            let cell = gesture.view as! UITableViewCell
-            let indexPath = tableView.indexPath(for: cell)
-            YCXMenu.show(in: cell, from: cell.bounds, menuItems: [deleteItem as Any], selected: { (kindex, selectdItem) in
+            
+            let  alertView =  UIAlertController.init(title: "确认删除", message: nil, preferredStyle: .alert)
+            let alertAction = UIAlertAction.init(title: "OK", style: .default, handler: {  [unowned self] (action) in
+                let cell = gesture.view as! UITableViewCell
+                let indexPath = self.tableView.indexPath(for: cell)
+                
                 let device = self.dataArr[indexPath!.row] as! Control_type
                 let fetchQequest = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Control_type")
                 let predicate = NSPredicate.init(format: "name_ch = %@", device.name_ch!)
@@ -139,10 +141,10 @@ extension TCTeleListViewController : UITableViewDataSource,UITableViewDelegate{
                 }
                 self.dataArr = self.getControls() as NSArray
             })
+            
+            alertView.addAction(alertAction)
+            
+            present(alertView, animated: true, completion: nil)
         }
-    }
-    
-    @objc func deleteAction(_:YCXMenuItem){
-        
     }
 }
