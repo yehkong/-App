@@ -13,12 +13,14 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    
     //context
     lazy var modelManagerContext: NSManagedObjectContext = {
         let managerContext = NSManagedObjectContext.init(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
         managerContext.persistentStoreCoordinator = self.managerModelCoordinator
         return managerContext
     }()
+    
     //Model
     lazy var managerModel : NSManagedObjectModel = {
         let objectModel = NSManagedObjectModel.mergedModel(from: nil)
@@ -33,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //        let url = Bundle.main.resourceURL?.appendingPathComponent("tsg_temp1.db")
         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
         let targetPath = documentsPath! + "/tsg_temp.db"
+        
         do{
             try modelCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: NSURL.init(fileURLWithPath: targetPath) as URL, options: nil)
         }catch let error as NSError{
@@ -41,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return modelCoordinator
     }()
+    
     //保存数据库操作
     func saveCoreDataContext() {
         if self.modelManagerContext.hasChanges {
@@ -53,9 +57,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
     }
+    
     //写入初始化数据,暂时未用
     func writeDataToDB() {
-
+        
         for i in 0..<9 {
             
             let entity : Control_type = NSEntityDescription.insertNewObject(forEntityName: "Control_type", into: self.modelManagerContext) as! Control_type
@@ -100,7 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //                let firstPageController = TCNavigationViewController.init(rootViewController: TCTeleListViewController())
         
-//        writeDataToDB()
+        //        writeDataToDB()
         
         window?.rootViewController = firstPageController
         window?.makeKeyAndVisible()

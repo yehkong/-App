@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+//协议，用于通知和传值
 protocol updateDataDelegate{
     func updateData(addDevice device : Control_type) -> ()
 }
@@ -35,16 +36,11 @@ class TCTypeViewController: UIViewController {
         super.viewDidLoad()
         
         title = NSLocalizedString("选择设备", comment: "")
-        //        let collectionViewLayout = UICollectionViewFlowLayout.init()
-        //        collectionViewLayout.itemSize = CGSize.init(width: (375 - 40)/3, height: (375 - 40)/3)
-        //        collectionViewLayout.minimumLineSpacing = 10.0
-        //        collectionViewLayout.minimumInteritemSpacing = 10.0
-        //        collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-        //        collectionViewLayout.scrollDirection = .vertical
-        //        collectionView.collectionViewLayout = collectionViewLayout
+      
         collectionView.collectionViewLayout = TCCollectionLayout()
         
         collectionView.register(UINib.init(nibName: CellID, bundle: nil), forCellWithReuseIdentifier: CellID)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -70,17 +66,19 @@ class TCTypeViewController: UIViewController {
 }
 
 extension TCTypeViewController : UICollectionViewDataSource,UICollectionViewDelegate{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.devieTypeArr.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellID, for: indexPath) as? TCTypeCollectionViewCell
         let img = UIImage.init(named: devieTypeArr.object(at: indexPath.item) as! String)
         cell?.TeleImageView.image = img
         cell?.TeleLabel.text = "设备\(indexPath.item)"
-//        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(choiseTeleDevice(_:)))
-//        cell?.contentView .addGestureRecognizer(gesture)
+        //        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(choiseTeleDevice(_:)))
+        //        cell?.contentView .addGestureRecognizer(gesture)
         return cell!
         
     }
@@ -93,6 +91,12 @@ extension TCTypeViewController : UICollectionViewDataSource,UICollectionViewDele
         device.name_ch = "设备\(indexPath.item)" + "-\(arc4random()%100)"
         appDelegate.saveCoreDataContext()
         delegate?.updateData(addDevice: device)
+        let alertView = UIAlertController.init(title:nil, message: "添加成功，可返回列表查看", preferredStyle: UIAlertControllerStyle.alert)
+        alertView.addAction(UIAlertAction.init(title: "OK", style: UIAlertActionStyle.cancel, handler: { (action) in
+        }))
+        present(alertView, animated: true) {
+        }
+        
     }
 }
 

@@ -12,7 +12,8 @@
 
 import UIKit
 
-class TCViewController: TCHomeViewController {
+class TCViewController: TCHomeViewController,updateDataDelegate {
+
     
     var telelistViewController : TCTeleListViewController!  //列表
     
@@ -30,6 +31,7 @@ class TCViewController: TCHomeViewController {
         super.viewDidLoad()
         
         telelistViewController = TCTeleListViewController()
+        telelistViewController.delegate = self
         self.view.addSubview(telelistViewController.view)
         coverView = UIView()
         coverView?.frame = self.view.bounds.offsetBy(dx: 0, dy: 0)
@@ -55,7 +57,7 @@ class TCViewController: TCHomeViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func showTeleControllerList(_ sender: UIBarButtonItem) {
+    override func showTeleControllerList(_ sender: UIBarButtonItem?) {
         
         if isListShow {
             UIView.animate(withDuration: 0.35, animations: { [unowned self] in
@@ -64,7 +66,6 @@ class TCViewController: TCHomeViewController {
                 self.mainView.transform = CGAffineTransform.identity
             }) { (true) in
                 self.coverView?.alpha = 1
-                
             }
         }else{
             UIView.animate(withDuration: 0.35, animations: { [unowned self] in
@@ -85,6 +86,12 @@ class TCViewController: TCHomeViewController {
         addViewController.delegate = telelistViewController
         navigationController?.pushViewController(addViewController, animated: true)
     }
+    
+    func updateData(addDevice device: Control_type) {
+        isListShow = true
+        self.showTeleControllerList(nil)
+    }
+    
     /*
      // MARK: - Navigation
      

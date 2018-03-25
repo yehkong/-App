@@ -12,18 +12,22 @@ class TCHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //标题
-        let mainTitle = NSMutableAttributedString.init(string: NSLocalizedString("万能遥控", comment: ""))
+        let mainTitle = NSMutableAttributedString.init(string: NSLocalizedString("设备管理", comment: ""))
         mainTitle.addAttribute(NSAttributedStringKey.font, value: UIFont.boldSystemFont(ofSize: 21), range: NSMakeRange(0, mainTitle.length))
         let titleLabel = UILabel.init()
         titleLabel.attributedText = mainTitle
         let lableFrame = mainTitle .boundingRect(with: CGSize.init(width: 1000, height: 0), options: .usesLineFragmentOrigin, context: nil)
         titleLabel.frame = lableFrame
         navigationItem.titleView = titleLabel
+        
         //列表item
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "list"), style: .plain, target: self, action: #selector(showTeleControllerList(_:)))
+        
         //二维码item
         let qr_btn = UIBarButtonItem.init(image: UIImage.init(named: "btn_qr"), style: .plain, target: self, action: #selector(qrAction(_ :)))
+        
         //增加item
         let add_btn = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addTeleController(_:)))
         self.navigationItem.rightBarButtonItems = [qr_btn,add_btn]
